@@ -120,13 +120,13 @@ export default function Navbar() {
 
       {/* Slide-in Modal */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-85 z-50 transform transition-transform duration-300 ${
+        className={`fixed inset-0 bg-white z-50 transform transition-transform duration-300 ${
           isModalOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="flex justify-end w-full p-4">
           <button onClick={toggleModal} aria-label="Close Menu">
-            <CloseIcon className="text-white" />
+            <CloseIcon className="text-black" />
           </button>
         </div>
         <ul className="space-y-2 text-left mt-0 ml-8">
@@ -134,7 +134,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-white text-lg font-roboto-condensed hover:underline"
+                className="text-black text-lg font-roboto-condensed hover:underline"
                 onClick={toggleModal}
               >
                 {link.text}
