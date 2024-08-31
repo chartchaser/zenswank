@@ -2,7 +2,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 export default function ShopLatest() {
     return (
-        <div className="w-full py-1 md:flex justify-between items-center bg-gray-900 hidden">
+        <div className="w-full py-1 md:flex justify-between items-center bg-black hidden">
             <div className="w-1/3 flex justify-start ">
                 {/* Left content here */}
             </div>
