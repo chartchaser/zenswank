@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import { navLinks } from '@/utilities/config';
 import { styled, alpha } from '@mui/material/styles';
@@ -8,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import InputBase from '@mui/material/InputBase';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
-import ShopLatest from '../Components/WideLinks/ShopLatest';
+import {ShopLatest} from '../components/WideLinks/ShopLatest';
 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);

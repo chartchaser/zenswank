@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { welcomeText } from "@/utilities/config";
 import React from "react";
 

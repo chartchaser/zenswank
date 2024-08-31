@@ -24,3 +24,8 @@ body {
 .fade-in {
   animation: fadeIn 2s ease-in-out forwards; /* Adjust the duration and easing as needed */
 }
+
+
+.what-we-do {
+color: #de9068
+}
