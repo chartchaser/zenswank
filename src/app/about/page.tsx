@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { aboutMe } from "@/utilities/config";
 import { bad_script, my_font } from "@/utilities/fonts";
+import Divider from '@mui/material/Divider';
 
 export default function About() {
   return (
@@ -25,6 +26,9 @@ export default function About() {
           </p>
         </div>
       </div>
+      <Divider className='w-1/2'/>
+      <img src={aboutMe[0].lowerArticleImage} className='h-[555px] w-[390px]'/>
+      <h4 className="text-lg font-bold uppercase text-gray-800 tracking-wider">{aboutMe[0].lowerArticleTitle}</h4>
     </div>
   );
 }
