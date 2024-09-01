@@ -6,9 +6,7 @@
 
 
 
-body {
-  font-family: 'Roboto Condensed', sans-serif;
-}
+
 
 @keyframes fadeIn {
   0% {
@@ -28,4 +26,8 @@ body {
 
 .what-we-do {
 color: #de9068
+}
+
+.custom-footer {
+  color: #de9068
 }

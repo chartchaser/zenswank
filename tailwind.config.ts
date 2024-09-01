@@ -11,6 +11,9 @@ const config: Config = {
       fontFamily: {
         'roboto-condensed': ['"Roboto Condensed"', 'sans-serif'],
       },
+      colors : {
+        customOrange: '#de9068'
+      }
     },
   },
   plugins: [],

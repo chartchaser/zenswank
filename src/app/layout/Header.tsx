@@ -1,15 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import { navLinks } from '@/utilities/config';
-import { styled, alpha } from '@mui/material/styles';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
-import InputBase from '@mui/material/InputBase';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 import {ShopLatest} from '../comp/WideLinks/ShopLatest';
+import SearchBar from '../comp/search/SearchBar';
 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,47 +17,6 @@ export default function Navbar() {
     setIsModalOpen(!isModalOpen);
   };
 
-  const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
-      width: 'auto',
-    },
-  }));
-
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }));
-
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    width: '100%',
-    '& .MuiInputBase-input': {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create('width'),
-      [theme.breakpoints.up('sm')]: {
-        width: '12ch',
-        '&:focus': {
-          width: '20ch',
-        },
-      },
-    },
-  }));
 
   return (
     <header>
@@ -67,15 +25,7 @@ export default function Navbar() {
       
         {/* Left Column: MUI SearchBar */}
         <div className="w-1/4 uppercase">
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+          <SearchBar />
         </div>
 
         {/* Middle Column: Picture with Links Below */}
