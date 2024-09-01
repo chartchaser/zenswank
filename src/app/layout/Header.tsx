@@ -7,11 +7,12 @@ import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
-import {ShopLatest} from '../comp/WideLinks/ShopLatest';
+import ShopLatestMobile from '../comp/WideLinks/ShopLatest';
 import SearchBar from '../comp/search/SearchBar';
 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<Boolean>(true);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -20,7 +21,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <ShopLatest/>
+      <ShopLatestMobile mobile={false}/>
       <nav className="container mx-auto py-4 justify-between items-center lg:flex hidden">
       
         {/* Left Column: MUI SearchBar */}
@@ -94,6 +95,7 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
+      <ShopLatestMobile mobile={true}/>
     </header>
   );
 }
