@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import InputBase from '@mui/material/InputBase';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
-import {ShopLatest} from '../components/WideLinks/ShopLatest';
+import {ShopLatest} from '../Components/WideLinks/ShopLatest';
 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
