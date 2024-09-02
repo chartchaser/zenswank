@@ -82,6 +82,7 @@ interface FooterLinks {
   }
   
   interface ProductData {
+    
     id: number;
     attributes: ProductAttributes;
   }
