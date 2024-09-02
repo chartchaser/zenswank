@@ -9,6 +9,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 import ShopLatestMobile from '../comp/WideLinks/ShopLatest';
 import SearchBar from '../comp/search/SearchBar';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,9 +36,9 @@ export default function Navbar() {
           <ul className="flex justify-center space-x-12 mt-4">
             {navLinks.map((link: any) => (
               <li key={link.href}>
-                <a href={link.href} className="text-black hover:text-gray-900 font-roboto-condensed uppercase tracking-wider">
+                <Link href={link.href} className="text-black hover:text-gray-900 font-roboto-condensed uppercase tracking-wider">
                   {link.text}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -84,13 +85,13 @@ export default function Navbar() {
         <ul className="space-y-2 text-left mt-0 ml-8">
           {navLinks.map((link: any) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="text-black text-lg font-roboto-condensed hover:underline"
                 onClick={toggleModal}
               >
                 {link.text}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
